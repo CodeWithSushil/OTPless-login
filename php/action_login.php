@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once "./config.php";
-if ($_SERVER["REQUEST_METHOD"] === "POST"){
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
   if (isset($_POST["submit"])) {
     $email = $_POST["email"];
     $user_ip = $_SERVER["REMOTE_ADDR"];
@@ -11,6 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
     $req = mysqli_query($con, $qy);
     
     if(mysqli_num_rows($req) > 0){
+
       while($row = mysqli_fetch_assoc($req)){
         $u_email = $row['user_email'];
         $ip = $row['user_ip'];
@@ -32,6 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
          header("Location: ../pages/home.php");
        }
      }
+    } else{
+      echo "<p>User not exist</p>";
     }
   }
 }

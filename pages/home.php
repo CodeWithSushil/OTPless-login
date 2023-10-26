@@ -5,6 +5,7 @@ if(!isset($_SESSION['login'])){
  exit();
 }
 include_once("header.php");
+include_once("navbar.php");
 ?>
 <h2 class="text-success"><?php echo $_SESSION['login']; ?></h2>
 <a class="btn btn-outline-danger btn-sm" href="./logout.php"><i class="bi bi-box-arrow-right"></i> Logout</a>
