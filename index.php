@@ -16,6 +16,9 @@ session_start();
 use App\Services\Router\RouteService;
 use Egulias\EmailValidator\EmailValidator;
 use Egulias\EmailValidator\Validation\DNSCheckValidation;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
 $route = new RouteService();
 require_once APP_ROOT ."/routes/route.php";

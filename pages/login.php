@@ -12,7 +12,7 @@
     <label for="exampleInputEmail1" class="form-label"><i class="bi bi-envelope-at-fill"></i> Email</label>
 </div>
 <div class="d-flex align-items-center justify-content-between">
-  <button type="submit" name="submit" class="btn btn-sm btn-outline-dark"><i class="bi bi-box-arrow-in-right"></i> Submit</button>
+  <button type="submit" id="submit" name="submit" class="btn btn-sm btn-outline-dark"><i class="bi bi-box-arrow-in-right"></i> Login</button>
   <a class="text-dark text-decoration-none" href="/register">Register ?</a>
 </div>
 </form>

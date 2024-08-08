@@ -6,17 +6,17 @@
   <div class="card-title">
 <h2 class="text-center text-dark mb-3">Sign Up</h2>
 </div>
-<form method="POST" action="/submit-register">
+<form method="POST" action="submit-register">
 <div class="form-floating mb-3">
-<input type="text" name="name" class="form-control" id="floatingInput" placeholder="user" required>
+<input type="text" id="name" name="name" class="form-control" id="floatingInput" placeholder="user" required>
 <label for="floatingInput"><i class="bi bi-person-fill"></i> Name</label>
 </div>
 <div class="form-floating mb-3">
-<input type="email" name="email" class="form-control" id="floatingInput" placeholder="user@example.com" required>
+<input type="email" id="email" name="email" class="form-control" id="floatingInput" placeholder="user@example.com" required>
 <label for="floatingInput"><i class="bi bi-envelope-at-fill"></i> Email</label>
 </div>
 <div class="d-flex align-items-center justify-content-between">
-<button type="submit" name="submit" class="btn btn-sm btn-outline-dark"><i class="bi bi-box-arrow-in-right"></i> Submit</button>
+<button type="submit" id="register" name="submit" class="btn btn-sm btn-outline-dark"><i class="bi bi-box-arrow-in-right"></i> Register</button>
 <a class="text-dark text-decoration-none" href="/login">Login</a>
 </div>
 </form>

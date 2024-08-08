@@ -46,8 +46,9 @@ class User extends BaseModel{
 		$stmt = $this->conn->prepare($query);
 
 		$stmt->bindParam(':email',$this->email);
-
-    if($stmt->execute()){
+    $stmt->execute();
+    $count = $stmt->rowCount();
+    if($count){
       $row = $stmt->fetch(PDO::FETCH_ASSOC);
 			$this->id = $row['id'];
 			$this->name = $row['name'];
